@@ -1,5 +1,5 @@
 {
     "token": "YOUR TOKEN HERE",
     "prefix": "YOUR PREFIX HERE",
-    "mongoPath": "mongodb://localhost:27017/yournamehere"
+    "mongoPath": "mongodb+srv://<your username here>:<your password here>@v13tutorial.9tk54.mongodb.net/<Your database name here>?retryWrites=true&w=majority"
 }
