@@ -82,16 +82,16 @@ module.exports = (commandOptions) => {
 
 module.exports.listen = (client) => {
     client.on('messageCreate', (message) => {
-        const { member, content, guild } = message
+       const { member, content, guild } = message
 
-        const prefix = globalprefix
+            const arguments = content.split(/[ ]+/)
 
-        const arguments = content.split(/[]+/)
+            const prefix = globalPrefix
 
-        const args = message.content.slice(prefix.length).split(/ +/);
-        const cmd = args.shift().toLowerCase();
+            const args = message.content.slice(prefix.length).split(/ +/);
+            const cmd = args.shift().toLowerCase();
 
-        const name = arguments.shift().toLowerCase()
+            const name = arguments.shift().toLowerCase()
 
         if(name.startsWith(globalprefix)){
             const command = allCommands[name.replace(prefix, '')]
